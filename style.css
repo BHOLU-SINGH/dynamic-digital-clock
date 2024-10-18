@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #0e1f2f;
+}
+.container .hr,
+.container .min,
+.container .sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border: 5px solid #12283d;
+  margin: 20px;
+  animation: animate 3s linear infinite;
+}
+.container .hr {
+  border-left: 5px solid rgb(253, 51, 51);
+}
+.container .min {
+  border-left: 5px solid rgb(235, 235, 59);
+  border-bottom: 5px solid rgb(235, 235, 59);
+  animation-delay: 0.5s;
+}
+.container .sec {
+  border: 5px solid rgb(62, 238, 62);
+  border-top: 5px solid transparent;
+  animation-delay: 1s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container .hr::before,
+.container .min::before,
+.container .sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transform: translateX(10px) translateY(10px);
+}
+.container .hr::before {
+  background: rgb(253, 51, 51);
+  box-shadow: 0 0 10px rgb(253, 51, 51), 0 0 20px rgb(253, 51, 51),
+    0 0 30px rgb(253, 51, 51);
+}
+.container .min::before {
+  background: rgb(235, 235, 59);
+  box-shadow: 0 0 10px rgb(235, 235, 59), 0 0 20px rgb(235, 235, 59),
+    0 0 30px rgb(235, 235, 59);
+}
+.container .sec::before {
+  background: rgb(62, 238, 62);
+  box-shadow: 0 0 10px rgb(62, 238, 62), 0 0 20px rgb(62, 238, 62),
+    0 0 30px rgb(62, 238, 62);
+}
+.container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  font-size: 1.4em;
+  text-transform: capitalize;
+  animation: animate2 3s linear infinite;
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.container #min {
+  animation-delay: 0.5s;
+}
+.container #sec {
+  animation-delay: 1s;
+}
+.container .midday {
+  width: auto;
+  height: auto;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 22px;
+  margin-top: -8%;
+  margin-left: 20px;
+}
